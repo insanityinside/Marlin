@@ -2534,10 +2534,10 @@
 #endif
 
 #if ANY(MESH_BED_LEVELING, AUTO_BED_LEVELING_UBL)
-  // Override the mesh area if the automatic (max) area is too large
+  // Reconfigured for CR touch, max X is 245.9 with bracket
   #define MESH_MIN_X 5
   #define MESH_MIN_Y 15              // avoid clamps
-  #define MESH_MAX_X X_BED_SIZE - 15 // NOZZLE_TO_PROBE_OFFSET_X - "MAX_POS"
+  #define MESH_MAX_X 203             // Max safe probe position (nozzle reaches 248.72mm)
   #define MESH_MAX_Y Y_BED_SIZE - 15 // avoid clamps
 #endif
 
