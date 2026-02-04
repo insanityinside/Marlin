@@ -1725,7 +1725,7 @@
  *     O-- FRONT --+
  */
 // #define NOZZLE_TO_PROBE_OFFSET { -45, -5, -1.2 } // (mm) X, Y, Z distance from Nozzle tip to Probe trigger-point
-#define NOZZLE_TO_PROBE_OFFSET { -45.72, -4.45, -0.775 } // (mm) X, Y, Z distance from Nozzle tip to Probe trigger-point
+#define NOZZLE_TO_PROBE_OFFSET { -45.72, -4.45, -1 } // (mm) X, Y, Z distance from Nozzle tip to Probe trigger-point
 
 // Enable and set to use a specific tool for probing. Disable to allow any tool.
 #define PROBING_TOOL 0
@@ -1974,7 +1974,7 @@
 #define Y_MIN_POS 0
 #define Z_MIN_POS 0
 // #define X_MAX_POS X_BED_SIZE
-#define X_MAX_POS 249 // Extended for CRTouch deployment
+#define X_MAX_POS 247 // Extended for CRTouch deployment
 #define Y_MAX_POS Y_BED_SIZE
 #define Z_MAX_POS 250
 //#define I_MIN_POS 0
@@ -2380,7 +2380,7 @@
 
 #if ENABLED(LCD_BED_TRAMMING)
   // #define BED_TRAMMING_INSET_LFRB { 30, 30, 30, 30 } // (mm) Left, Front, Right, Back insets
-  #define BED_TRAMMING_INSET_LFRB { 31, 37, 32, 32 } // (mm) Left, Front, Right, Back insets
+  #define BED_TRAMMING_INSET_LFRB { 31, 37, 34, 32 } // (mm) Left, Front, Right, Back insets
   #define BED_TRAMMING_HEIGHT      0.0        // (mm) Z height of nozzle at tramming points
   #define BED_TRAMMING_Z_HOP       4.0        // (mm) Z raise between tramming points
   #define BED_TRAMMING_INCLUDE_CENTER       // Move to the center after the last corner

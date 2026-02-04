@@ -1120,7 +1120,7 @@
   // Define from 3 to 9 points to probe.
   // #define TRAMMING_POINT_XY { { 31, 37 }, { 203, 37 }, { 203, 203 }, { 31, 203 } }
   // Updated to stop crashing the X axis
-  #define TRAMMING_POINT_XY { { 31, 37 }, { 202, 37 }, { 202, 203 }, { 31, 203 } }
+  #define TRAMMING_POINT_XY { { 31, 37 }, { 201, 37 }, { 201, 203 }, { 31, 203 } }
 
   // Define position names for probe points.
   #define TRAMMING_POINT_NAME_1 "Front-Left"
@@ -2395,8 +2395,8 @@
   //#define BABYSTEP_XY                     // Also enable X/Y Babystepping. Not supported on DELTA!
   //#define BABYSTEP_INVERT_Z               // Enable if Z babysteps should go the other way
   #define BABYSTEP_MILLIMETER_UNITS         // Specify BABYSTEP_MULTIPLICATOR_(XY|Z) in mm instead of micro-steps
-  #define BABYSTEP_MULTIPLICATOR_Z  0.05    // (steps or mm) Steps or millimeter distance for each Z babystep
-  #define BABYSTEP_MULTIPLICATOR_XY 0.05    // (steps or mm) Steps or millimeter distance for each XY babystep
+  #define BABYSTEP_MULTIPLICATOR_Z  0.01    // (steps or mm) Steps or millimeter distance for each Z babystep
+  #define BABYSTEP_MULTIPLICATOR_XY 0.025    // (steps or mm) Steps or millimeter distance for each XY babystep
 
   //#define DOUBLECLICK_FOR_Z_BABYSTEPPING  // Double-click on the Status Screen for Z Babystepping.
   #if ENABLED(DOUBLECLICK_FOR_Z_BABYSTEPPING)
@@ -2413,7 +2413,7 @@
   #define BABYSTEP_ZPROBE_OFFSET            // Combine M851 Z and Babystepping
   #if ENABLED(BABYSTEP_ZPROBE_OFFSET)
     //#define BABYSTEP_HOTEND_Z_OFFSET      // For multiple hotends, babystep relative Z offsets
-    #define BABYSTEP_GFX_OVERLAY          // Enable graphical overlay on Z-offset editor
+    //#define BABYSTEP_GFX_OVERLAY          // Enable graphical overlay on Z-offset editor
   #endif
 #endif
 
@@ -2534,10 +2534,10 @@
 #endif
 
 #if ANY(MESH_BED_LEVELING, AUTO_BED_LEVELING_UBL)
-  // Reconfigured for CR touch, max X is 245.9 with bracket
+  // Reconfigured for CR touch, max X is 247 with bracket
   #define MESH_MIN_X 5
   #define MESH_MIN_Y 15              // avoid clamps
-  #define MESH_MAX_X 203             // Max safe probe position (nozzle reaches 248.72mm)
+  #define MESH_MAX_X 201             // Max safe probe position
   #define MESH_MAX_Y Y_BED_SIZE - 15 // avoid clamps
 #endif
 
